@@ -15,7 +15,7 @@ class _CartPageState extends State<CartPage> {
       body: Center(
         child: Text(
           "CartPage",
-          style: Styels.text30,
+          style: Styels.text25,
         ),
       ),
     );

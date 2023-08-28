@@ -15,7 +15,7 @@ class _StorePageState extends State<StorePage> {
       body: Center(
         child: Text(
           "StorePage",
-          style: Styels.text30,
+          style: Styels.text25,
         ),
       ),
     );

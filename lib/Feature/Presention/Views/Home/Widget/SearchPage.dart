@@ -15,7 +15,7 @@ class _SearchPageState extends State<SearchPage> {
       body: Center(
         child: Text(
           "SearchPage",
-          style: Styels.text30,
+          style: Styels.text25,
         ),
       ),
     );

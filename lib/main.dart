@@ -18,6 +18,7 @@ class ecomerce extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomeView(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
