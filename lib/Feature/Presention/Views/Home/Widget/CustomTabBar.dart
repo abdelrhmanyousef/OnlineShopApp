@@ -22,13 +22,13 @@ class CustomTapBar extends StatelessWidget {
         unselectedLabelColor: Colors.grey.withOpacity(0.3),
         tabs: const [
           Tab(
-            text: "  MenShoes",
+            text: "  Men Shoes",
           ),
           Tab(
-            text: "  WomenShoes",
+            text: "  Women Shoes",
           ),
           Tab(
-            text: "  KidsShoes",
+            text: "  Kids Shoes",
           )
         ],
       ),

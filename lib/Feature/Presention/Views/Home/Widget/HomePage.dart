@@ -3,6 +3,8 @@ import 'package:ecomerceapp/Core/Utils/AppStyel.dart';
 import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/CustomTabBar.dart';
 import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/LatestListView.dart';
 import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/ListViewItems.dart';
+import 'package:ecomerceapp/helper/Service.dart';
+import 'package:ecomerceapp/helper/shoes_model/shoes_model.dart';
 import 'package:flutter/material.dart';
 import 'package:antdesign_icons/antdesign_icons.dart';
 
@@ -17,6 +19,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   late final TabController _tabController =
       TabController(length: 3, vsync: this);
+  late Future<List<ShoesModel>> _male;
+  late Future<List<ShoesModel>> _Female;
+  late Future<List<ShoesModel>> _Kids;
+
+  void getmal() {
+    _male = Helper().GetMale();
+  }
+
+  void getfemal() {
+    _Female = Helper().GetFemal();
+  }
+
+  void getKids() {
+    _Kids = Helper().GetKids();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getmal();
+    getfemal();
+    getKids();
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,15 +75,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.265),
+            padding:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.21),
             child: TabBarView(controller: _tabController, children: [
               Column(
                 children: [
                   ListViewItems(
-                    hight: MediaQuery.of(context).size.height * 0.405,
-                    contahight: MediaQuery.of(context).size.height,
-                    contawidth: MediaQuery.of(context).size.width * 0.6,
+                    male: _male,
+                    hight: MediaQuery.of(context).size.height * 0.460,
+                    contahight: MediaQuery.of(context).size.height * 0.7,
+                    contawidth: MediaQuery.of(context).size.width * 0.7,
                   ),
                   const Padding(
                     padding: EdgeInsets.fromLTRB(10, 15, 10, 15),
@@ -85,6 +111,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                   ),
                   LatestListViewItems(
+                    male: _male,
                     hight: MediaQuery.of(context).size.height * 0.13,
                     contahight: MediaQuery.of(context).size.height * 0.12,
                     contawidth: MediaQuery.of(context).size.width * 0.28,
