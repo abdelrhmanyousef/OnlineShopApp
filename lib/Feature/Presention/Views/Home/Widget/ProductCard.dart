@@ -70,10 +70,6 @@ class _ProductCardState extends State<ProductCard> {
             widget.name,
             style: Styels.text30.copyWith(color: Colors.black),
           ),
-          Text(
-            " Shoes",
-            style: Styels.text30.copyWith(color: Colors.black),
-          ),
           const SizedBox(
             height: 8,
           ),
