@@ -19,6 +19,7 @@ class KidsWidget extends StatelessWidget {
     return Column(
       children: [
         ListViewItems(
+          axis: Axis.horizontal,
           male: _Kids,
           hight: MediaQuery.of(context).size.height * 0.460,
           contahight: MediaQuery.of(context).size.height * 0.7,

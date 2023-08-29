@@ -9,11 +9,13 @@ class ListViewItems extends StatelessWidget {
     this.contahight,
     this.contawidth,
     required this.male,
+    required this.axis,
   });
   final double? hight;
   final double? contahight;
   final double? contawidth;
   late Future<List<ShoesModel>> male;
+  final Axis axis;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class ListViewItems extends StatelessWidget {
               final male = snapshot.data;
             return ListView.builder(
               itemCount: snapshot.data!.length,
-              scrollDirection: Axis.horizontal,
+              scrollDirection: axis,
               itemBuilder: (context, index) {
                 final shoe = snapshot.data![index];
                 return Padding(

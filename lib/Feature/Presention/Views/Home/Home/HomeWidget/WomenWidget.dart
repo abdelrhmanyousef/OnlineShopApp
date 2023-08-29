@@ -18,6 +18,7 @@ class WoMenWidget extends StatelessWidget {
     return Column(
       children: [
         ListViewItems(
+          axis: Axis.horizontal,
           male: _female,
           hight: MediaQuery.of(context).size.height * 0.460,
           contahight: MediaQuery.of(context).size.height * 0.7,
