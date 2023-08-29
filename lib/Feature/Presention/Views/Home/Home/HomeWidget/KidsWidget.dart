@@ -1,7 +1,8 @@
 import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:ecomerceapp/Core/Utils/AppStyel.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/LatestListView.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/ListViewItems.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/LatestListView.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/ListViewItems.dart';
+
 import 'package:ecomerceapp/helper/shoes_model/shoes_model.dart';
 import 'package:flutter/material.dart';
 

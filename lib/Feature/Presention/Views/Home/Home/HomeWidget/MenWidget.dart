@@ -1,24 +1,24 @@
 import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:ecomerceapp/Core/Utils/AppStyel.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/LatestListView.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/ListViewItems.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/LatestListView.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/ListViewItems.dart';
 import 'package:ecomerceapp/helper/shoes_model/shoes_model.dart';
 import 'package:flutter/material.dart';
 
-class WoMenWidget extends StatelessWidget {
-  const WoMenWidget({
+class MenWidget extends StatelessWidget {
+  const MenWidget({
     super.key,
-    required Future<List<ShoesModel>> female,
-  }) : _female = female;
+    required Future<List<ShoesModel>> male,
+  }) : _male = male;
 
-  final Future<List<ShoesModel>> _female;
+  final Future<List<ShoesModel>> _male;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ListViewItems(
-          male: _female,
+          male: _male,
           hight: MediaQuery.of(context).size.height * 0.460,
           contahight: MediaQuery.of(context).size.height * 0.7,
           contawidth: MediaQuery.of(context).size.width * 0.7,
@@ -48,7 +48,7 @@ class WoMenWidget extends StatelessWidget {
           ),
         ),
         LatestListViewItems(
-          male: _female,
+          male: _male,
           hight: MediaQuery.of(context).size.height * 0.13,
           contahight: MediaQuery.of(context).size.height * 0.12,
           contawidth: MediaQuery.of(context).size.width * 0.28,

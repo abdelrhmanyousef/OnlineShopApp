@@ -1,9 +1,9 @@
 import 'package:ecomerceapp/Core/Utils/AppStyel.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/CustomTabBar.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/MenWidget%20copy.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/CustomTabBar.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/KidsWidget.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/MenWidget.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/WomenWidget.dart';
 
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/MenWidget.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/WomenWidget.dart';
 import 'package:ecomerceapp/helper/Service.dart';
 import 'package:ecomerceapp/helper/shoes_model/shoes_model.dart';
 import 'package:flutter/material.dart';

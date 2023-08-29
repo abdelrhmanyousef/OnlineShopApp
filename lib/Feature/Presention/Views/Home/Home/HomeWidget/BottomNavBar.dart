@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:ecomerceapp/Controllers/MainScreenProvider.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Widget/CustomBottomNav.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/CustomBottomNav.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
