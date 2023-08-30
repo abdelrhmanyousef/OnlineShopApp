@@ -1,12 +1,16 @@
+import 'package:ecomerceapp/Feature/Presention/Views/Home/CartPAge/CartPageWidget/CartItem.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/CartPAge/CartPageWidget/KidsWidgetcart.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/CartPAge/CartPageWidget/MenWidgetcart.dart';
+import 'package:ecomerceapp/Feature/Presention/Views/Home/CartPAge/CartPageWidget/WomenWidgetcart.dart';
 import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/CustomTabBar.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/KidsWidget.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/MenWidget.dart';
-import 'package:ecomerceapp/Feature/Presention/Views/Home/Home/HomeWidget/WomenWidget.dart';
+
 import 'package:ecomerceapp/helper/Service.dart';
 import 'package:ecomerceapp/helper/shoes_model/shoes_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
+import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
 class CartPageBody extends StatefulWidget {
   const CartPageBody({super.key});
@@ -66,14 +70,14 @@ class _CartPageBodyState extends State<CartPageBody>
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Ionicons.close,
                         color: Colors.white,
                       ),
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Ionicons.filter,
                         color: Colors.white,
                       ),
@@ -85,6 +89,19 @@ class _CartPageBodyState extends State<CartPageBody>
             ],
           ),
         ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.18,
+              left: 16,
+              right: 12),
+          child: TabBarView(controller: _tabController, children: [
+            MenWidgetCart(male: _male),
+            WomenWidgetCart(women: _Female),
+            KidsWidgetCart(
+              male: _Kids,
+            )
+          ]),
+        )
       ],
     );
   }

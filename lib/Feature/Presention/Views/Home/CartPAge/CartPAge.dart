@@ -1,4 +1,5 @@
-import 'package:ecomerceapp/Core/Utils/AppStyel.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecomerceapp/Feature/Presention/Views/Home/CartPAge/CartPageWidget/CartPageBody.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CartPageBody(),
+      backgroundColor: Colors.black38,
     );
   }
 }
